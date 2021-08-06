@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/Base.astro'
 import Exercise from "../components/Exercise.astro";
 const localData = Astro.fetchContent('../exercises/grid/*.md');
 ---
-<!DOCTYPE html>
+
 <BaseLayout title="- Grid">
     {localData.map((ex, i, all) => (
         <Exercise dataSuffix="grid" data={ex} num={i+1} all={all.length} />
