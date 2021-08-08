@@ -1,7 +1,10 @@
 code[class*="language-"],
 pre[class*="language-"] {
   // color: #f92aad;
-  color: var(--code-color, var(--ui-secondary-a11y));
+  // color: var(--code-color, var(--ui-secondary-a11y));
+  color: #f97e72;
+  color: #f92aad;
+  text-shadow: 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3;
   // text-shadow: 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3;
   background: none;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
@@ -48,7 +51,8 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #8e8e8e;
+  // color: #8e8e8e;
+  color: #717790;
 }
 
 .token.punctuation {
@@ -65,15 +69,17 @@ pre[class*="language-"] {
   color: #e2777a;
 }
 
-// .token.selector,
+.token.selector,
 .token.property {
-  // color: #72f1b8;
-  color: var(--ui-primary);
+  color: #72f1b8;
+  // color: var(--ui-primary);
   text-shadow: 0 0 2px #100c0f, 0 0 10px #257c5575, 0 0 35px #21272475;
 }
 
 .token.selector {
-  color: #f8ebf8;
+  // color: #f8ebf8;
+  color: #f4eee4;
+  text-shadow: 0 0 2px #393a33, 0 0 8px #f39f0572, 0 0 2px #f39f0572;
 }
 
 .token.function-name {
@@ -96,8 +102,8 @@ pre[class*="language-"] {
 
 .token.constant,
 .token.symbol {
-  // color: #f92aad;
-  color: var(--ui-secondary-a11y);
+  color: #f92aad;
+  // color: var(--ui-secondary-a11y);
   text-shadow: 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3;
 }
 
