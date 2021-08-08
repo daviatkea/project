@@ -1,5 +1,70 @@
 <header class="main-header">
     <h1 aria-label="CSS Exercises">
-        Exer<span class="stroke-text">CSS</span>ises
+        <slot />
     </h1>
 </header>
+
+<style lang="scss" global>
+    .main-header {
+        z-index: 100;
+        pointer-events: none;
+
+        h1 {
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 4rem;
+            --min-font: 40;
+            --max-font: 64;
+            font-size: clamp(
+            var(--min-font) * 1px,
+            var(--responsive),
+            var(--max-font) * 1px
+            );
+            cursor: pointer;
+            justify-self: center;
+            -webkit-user-select: none;
+            user-select: none;
+            // background: #2a2139;
+            background: #141330;
+            will-change: transform;
+            padding-inline: 1rem;
+            border-radius: 8px;
+            transform-origin: 0 0;
+            transition: 0.1s cubic-bezier(0.5, 0, 0.5, 1);
+            pointer-events: auto;
+        }
+
+        &.is-pinned {
+            position: sticky;
+            top: -1px;
+
+            h1 {
+            transform: translate(25%, 5px) scale(0.5);
+            transition: 0.3s;
+            }
+        }
+
+        .stroke-text {
+            // --c: #72f1b8;
+            // color: var(--c, #72f1b8);
+            --c: var(--primary);
+            color: var(--c, #82f4e1);
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 2px currentColor;
+            overflow: hidden;
+            max-width: 3.1ch;
+            display: inline-block;
+            vertical-align: bottom;
+            text-decoration: underline var(--c) 4px;
+            text-underline-offset: 4px;
+            transition: 0.3s;
+            will-change: max-width;
+            contain: paint;
+        }
+
+        .toggled {
+            --c: var(--ui-secondary, #fb28a8);
+            max-width: 1.05ch;
+        }
+    }
+</style>

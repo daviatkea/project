@@ -22,7 +22,8 @@
   // const classReg = /.+(?=\{)|.+(\n)(?=\{)/gm;
   // const classReg = /(?!\}).(.+(?=\{))|(.+(\n))(?=\{)/gm;
   // const classReg = /[^\}\n]+(?=\{)/g;
-  const classReg = /(?=.)[^\}]+(?=\{)/g;
+  // const classReg = /(?=.)[^\}]+(?=\{)/g;
+  const classReg = /(?! )(?=.)[^\}\,]+(?=.\{|\,)/g;
 
   outputs.forEach((output) => {
     output.addEventListener("click", ({ target }) => {
@@ -113,7 +114,7 @@
     function prefix(str) {
       return str.replaceAll(
         classReg,
-        (match) => `[data-exercise-key="${exerciseKey}"] ${match}`
+        (match) => `[data-exercise-key="${exerciseKey}"] .output ${match}`
       );
     }
 

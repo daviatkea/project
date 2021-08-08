@@ -1,7 +1,8 @@
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #f92aad;
-  text-shadow: 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3;
+  // color: #f92aad;
+  color: var(--code-color, var(--ui-secondary-a11y));
+  // text-shadow: 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3;
   background: none;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: 1em;
@@ -64,10 +65,15 @@ pre[class*="language-"] {
   color: #e2777a;
 }
 
-.token.property,
-.token.selector {
-  color: #72f1b8;
+// .token.selector,
+.token.property {
+  // color: #72f1b8;
+  color: var(--ui-primary);
   text-shadow: 0 0 2px #100c0f, 0 0 10px #257c5575, 0 0 35px #21272475;
+}
+
+.token.selector {
+  color: #f8ebf8;
 }
 
 .token.function-name {
@@ -90,7 +96,8 @@ pre[class*="language-"] {
 
 .token.constant,
 .token.symbol {
-  color: #f92aad;
+  // color: #f92aad;
+  color: var(--ui-secondary-a11y);
   text-shadow: 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3;
 }
 

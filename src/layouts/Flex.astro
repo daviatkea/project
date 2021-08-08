@@ -3,23 +3,37 @@
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-const {title} = Astro.props;
+const { title } = Astro.props;
 
 ---
 <html lang="da">
 <head>
-    <Head title={title}/>
+    <Head title={ title } />
+    <style global>
+      :root {
+        --ui-primary: #d0c7f3;
+        --code-color: #fff;
+      }
+      [data-type="value"] {
+        --m: var(--code-color); 
+      }
+      .hints li::marker {
+        text-shadow: 0 0 1px #000;
+      }
+      .main-header .toggled {
+        max-width: 0;
+      }
+    </style>
 </head>
 <body>
 
     <Header>
-      Exer<span class="stroke-text">CSS</span>ises
-    </Header> 
+      <span class="stroke-text">Fl</span>exercises
+    </Header>
 
     <main>
-    <!-- slot: your page content will be injected here. -->
-    <slot />
-  </main>
+      <slot />
+    </main>
 
     <Footer />
 
@@ -31,4 +45,3 @@ const {title} = Astro.props;
     <script type="module" src="/script/custom.js"></script>
 </body>
 </html>
-
