@@ -5,7 +5,7 @@ const boxes = [...Array(data.boxes)]
 const { customClass } = data
 ---
 
-<section data-extra={data.isExtra && "true"} data-exercise-key={num+dataSuffix} class={customClass ?? null}>
+<section data-extra={data.isExtra && "true"} data-exercise-key={`${dataSuffix}-${num}`} class={customClass ?? null}>
         <h2 class="small-label">Øvelse {num} af {all}</h2>
 
         {data.isExtra && (
