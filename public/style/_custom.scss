@@ -498,7 +498,7 @@ button.reset:focus::before {
 button:active {
   // box-shadow: inset 0 0 0 2px #5000ca;
   --btn-stroke: 2px;
-  background: hsl(264 50% 80%);
+  background: var(--btn-active, hsl(264 50% 80%));
 }
 
 button[disabled] {
