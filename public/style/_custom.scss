@@ -481,10 +481,10 @@ button {
   font-size: 0.95rem;
   padding: 0.25rem 0.5rem;
   cursor: pointer;
-  box-shadow: inset 0px 0px 0.001px var(--btn-stroke, 1px)
+  box-shadow: inset 0px 0px 0.0000001px var(--btn-stroke, 1px)
     var(--btn-theme, var(--ui-accent));
   transition: 0.2s box-shadow;
-  will-change: box-shadow;
+  // will-change: box-shadow;
 }
 
 button:focus {
@@ -503,7 +503,7 @@ button:active {
 
 button[disabled] {
   filter: grayscale(1);
-  opacity: var(--opacity, 0.7);
+  opacity: var(--opacity, 0.8);
   cursor: default;
 }
 
@@ -519,8 +519,8 @@ button.reset {
   /* padding-block: 0.1em; */
   color: #fff;
   padding: 0;
-  inline-size: 25px;
-  block-size: 25px;
+  inline-size: 28px;
+  block-size: 28px;
   background: transparent;
   display: grid;
   place-content: center;
