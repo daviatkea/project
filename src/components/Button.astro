@@ -11,7 +11,8 @@ const { icon } = Astro.props;
 
 <style lang="scss">
     button.plus {
-        --btn-icon: #5000ca;
+        --btn-icon: var(--ui-accent);
+        --btn-theme: var(--ui-accent);
     }
     button.minus {
         --btn-icon: hsl(324 66% 37%);
