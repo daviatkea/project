@@ -125,7 +125,7 @@
         boxes = localStorage.getItem(boxKey);
         minus.disabled = boxes > 0 ? false : true;
       } else {
-        // minus.disabled = boxes > 0 ? false : true;
+        minus.disabled = boxes > 0 ? false : true;
       }
 
       plus.addEventListener("click", (e) => {
