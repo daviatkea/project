@@ -472,7 +472,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 3px;
-  border-radius: 6px;
+  border-radius: 2rem;
   border: 0;
   // background: hsl(324deg 50% 80%);
   background: var(--btn-bg, hsl(264 50% 88%));
@@ -481,7 +481,7 @@ button {
   font-size: 0.95rem;
   padding: 0.25rem 0.5rem;
   cursor: pointer;
-  box-shadow: inset 0px 0px 0.01px var(--btn-stroke, 1px)
+  box-shadow: inset 0px 0px 0.001px var(--btn-stroke, 1px)
     var(--btn-theme, var(--ui-accent));
   transition: 0.2s box-shadow;
   will-change: box-shadow;
