@@ -354,6 +354,10 @@ section [data-no-hints] {
   gap: 1px;
 }
 
+section.gap-reset .output {
+  align-self: revert;
+}
+
 section.gap-reset .output > div {
   gap: 1px 0;
 }
