@@ -481,8 +481,8 @@ button {
   font-size: 0.95rem;
   padding: 0.25rem 0.5rem;
   cursor: pointer;
-  box-shadow: inset 0px 0px 0.000001px var(--btn-stroke, 1px)
-    var(--btn-theme, var(--ui-accent));
+  box-shadow: var(--btn-theme, var(--ui-accent)) var(--fake, 0) var(--fake, 0)
+    var(--fake, 0) var(--btn-stroke, 1px) inset;
   transition: 0.2s box-shadow;
   will-change: box-shadow;
 }
