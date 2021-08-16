@@ -354,8 +354,8 @@ section [data-no-hints] {
   gap: 1px;
 }
 
-section.gap-reset .output {
-  align-self: revert;
+section.stretch .output {
+  align-self: stretch;
 }
 
 section.gap-reset .output > div {
