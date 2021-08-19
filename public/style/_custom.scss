@@ -307,7 +307,7 @@ section details {
   // border: 2px solid hsl(264deg 40% 85%);
   border: 2px solid transparent;
   background: linear-gradient(hsl(257 54% 95%), hsl(257 54% 95%)) padding-box,
-    linear-gradient(to bottom right, #d6c9e8, 60%, transparent 90%) border-box;
+    linear-gradient(to bottom right, #d6c9e8, 60%, #d6c9e800 90%) border-box;
   display: inline-grid;
   border-radius: var(--bdrs-md);
 }
@@ -373,7 +373,7 @@ section [data-no-hints] {
   color: var(--m, currentColor);
   box-shadow: 0 0 0px black;
   inline-size: var(--space-2);
-  aspect-ratio: 1;
+  block-size: var(--space-2);
   border-radius: 50%;
   background: var(--m);
   margin-inline-end: var(--space-3);
