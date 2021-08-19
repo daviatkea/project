@@ -101,6 +101,7 @@
   --ui-accent: var(--purple-600);
 
   /* Spacing */
+  --space-8: 5rem;
   --space-7: 3rem;
   --space-6: 2rem;
   --space-5: 1rem;
@@ -214,7 +215,7 @@ main {
       var(--space-5),
       1fr
     );
-  gap: var(--space-7) 0;
+  gap: var(--space-8) 0;
   /* counter-reset: task; */
 }
 
