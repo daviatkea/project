@@ -464,8 +464,9 @@ section.bg-image .output > div {
 }
 
 .box {
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   // box-shadow: 0 0 0 1px hsl(289 27% 19%);
   box-shadow: 0 0 0 1px var(--ui-bg-3);
   /*min-inline-size: var(--space-6);
