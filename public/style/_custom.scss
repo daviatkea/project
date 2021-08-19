@@ -502,10 +502,14 @@ section.stretch .output {
   align-self: stretch;
 }
 
-section.logo-box .output .box:nth-child(1)::before {
-  content: "Logo";
-  font-size: 2rem;
-  font-weight: 900;
+section.logo-box .output .box:nth-child(1) {
+  padding: 1rem;
+
+  &::before {
+    content: "Logo";
+    font-size: 2rem;
+    font-weight: 900;
+  }
 }
 
 section.gap-reset .output > div {
