@@ -66,7 +66,8 @@
   --pink-200: #e0a3c8;
   --pink-300: #e17fba;
   --pink-400: #e957b0;
-  --pink-500: #fb28a8; // Default
+  // --pink-500: #fb28a8; // Default
+  --pink-500: #fb37ad; // Default
   --pink-600: #e32397;
   --pink-700: #bf2d85;
   --pink-800: #9e3675;
@@ -499,6 +500,12 @@ section [data-no-hints] {
 
 section.stretch .output {
   align-self: stretch;
+}
+
+section.logo-box .output .box:nth-child(1)::before {
+  content: "Logo";
+  font-size: 2rem;
+  font-weight: 900;
 }
 
 section.gap-reset .output > div {
