@@ -2,7 +2,7 @@
 import Button from "../components/Button.astro";
 const { data, num, all, dataSuffix } = Astro.props;
 const boxes = [...Array(data.boxes)]
-const { customClass } = data
+const { customClass, help } = data
 ---
 
 <section data-extra={data.isExtra && "true"} data-exercise-key={`${dataSuffix}-${num}`} class={customClass ?? null}>
@@ -83,10 +83,33 @@ const { customClass } = data
           <textarea aria-label="Write here" autocorrect="off" autocomplete="off" spellcheck="false" autocapitalize="off" class="prism-live language-css">{data.startingCSS.trim()}</textarea>
           <style class="style"></style>
         </div>
+        {data.help?.link ? (<small>Har du brug for hjælp? <a href={data.help.link} target="_blank" rel="noopener">Lær mere om {data?.help?.topic || "grid"}</a></small>) : null}
       </section>
 
 
-      <style>
+      <style lang="scss">
+        small {
+          font-size: 80%;
+          grid-column: 2 / -2;
+          background: var(--purple-50);
+          padding: 0 var(--space-2);
+          inline-size: max-content;
+          border-radius: var(--bdrs-sm);
+        
+          a:any-link {
+            text-decoration: underline;
+            color: var(--purple-600);
+            padding-block: var(--space-1);
+            display: inline-block;
+            border-radius: var(--bdrs-sm);
+
+            &:hover,
+            &:focus {
+              color: var(--purple-400);
+              text-decoration: none;
+            }
+          }
+        }
         .reset-buttons {
           position: absolute;
           inset-inline-end: 0;

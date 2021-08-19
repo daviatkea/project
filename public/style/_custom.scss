@@ -88,6 +88,15 @@
   --gray-200: #cccccc;
   --gray-600: #4d4d4d;
 
+  // Violet
+  --violet-100: #f3daf8;
+  --violet-200: #e2b9ea;
+  --violet-300: #d0a0da;
+  --violet-400: #be8cc8;
+  --violet-500: #ac7cb5;
+  --violet-600: #9b6fa4;
+  --violet-700: #8b6692;
+
   // Brand colors
   --primary: var(--aquamarine-300);
 
@@ -567,7 +576,9 @@ section.bg-image .output > div {
   /* padding-block-end: var(--space-1); */
   /* box-shadow: hsla(293, 43%, 32%, 0.4) -5px 5px, hsla(293, 43%, 32%, 0.3) -10px 10px, hsla(293, 43%, 32%, 0.2) -15px 15px, hsla(293, 43%, 32%, 0.1) -20px 20px, hsla(293, 43%, 32%, 0.05) -25px 25px; */
   justify-self: stretch;
-  align-self: start;
+  // align-self: start;
+  display: grid;
+  grid-template-rows: min-content;
 
   &::before {
     content: "css";
