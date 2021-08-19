@@ -441,7 +441,7 @@ section [data-no-hints] {
 
 .output > div {
   grid-area: 1 / -1;
-  padding: 4px;
+  padding: var(--space-1);
   place-self: center;
   justify-self: stretch;
   align-self: stretch;
@@ -740,7 +740,7 @@ section .banner::before {
   inset-block-start: 0;
   inset-inline-end: 0;
   text-align: center;
-  padding: 0.5em 2em;
+  padding: var(--space-3) var(--space-6);
   font-weight: 800;
   font-size: 1em;
   text-transform: uppercase;
