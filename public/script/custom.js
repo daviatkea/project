@@ -26,7 +26,8 @@
   // const classReg = /(?! )(?=.)[^\}\,]+(?=.\{|\,)/g;
   // const classReg = /(?!\s)\w?[^{}]+(?=\s)(?=(((?!\}).)*\{)|[^\{\}]+$)/g;
   // const classReg = /(?! )(?=.)[^},\(\/*]+[^\{\}](?={|,\n|,.+,)/g;
-  const classReg = /(?! )(?=.)[^},\/*]+[^\{\}](?=.{|,\n|,.+,)/g;
+  // const classReg = /(?! )(?=.)[^},\/*]+[^\{\}](?=.{|,\n|,.+,)/g;
+  const classReg = /(?!\s)[^,()/*{}]+(?![^{]*})/g;
 
   outputs.forEach((output) => {
     output.addEventListener("click", ({ target }) => {
