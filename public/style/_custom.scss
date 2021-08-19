@@ -233,6 +233,44 @@ section {
   // background: hsl(265 30% 95%);
   background: var(--ui-surface);
   border-radius: var(--bdrs-l);
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: calc(100% - 1rem);
+    display: block;
+    top: 0;
+    left: 0;
+    border-radius: calc(var(--bdrs-md) * 2);
+    opacity: 0.25;
+    background: var(--purple-200);
+    margin: -0.5rem 0.5rem;
+    height: calc(100% + 1rem);
+    transform: skewY(1deg);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: calc(100% - 1rem);
+    display: block;
+    top: 0;
+    left: 0;
+    border-radius: calc(var(--bdrs-md) * 2);
+    opacity: 0.25;
+    background: var(--pink-400);
+    margin: -0.25rem 0.5rem;
+    height: calc(100% + 0.25rem);
+    transform: skewY(-1deg);
+    mix-blend-mode: multiply;
+  }
+  &:nth-of-type(even)::before {
+    background: var(--pink-400);
+  }
+  &:nth-of-type(even)::after {
+    background: var(--purple-200);
+  }
 }
 
 /* section header, */
