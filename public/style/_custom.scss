@@ -263,7 +263,6 @@ section {
     margin: -0.25rem 0.5rem;
     height: calc(100% + 0.25rem);
     transform: skewY(-1deg);
-    mix-blend-mode: multiply;
   }
   &:nth-of-type(even)::before {
     background: var(--pink-400);
