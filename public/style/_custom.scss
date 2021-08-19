@@ -198,7 +198,8 @@ footer {
     );
   gap: var(--space-7) 0;
   text-align: center;
-  margin-block: var(--space-7);
+  margin-block-start: var(--space-7);
+  margin-block-end: var(--space-7);
 }
 
 :is(.main-header, footer) > * {
@@ -251,8 +252,9 @@ section :is(.small-label, .exercise-details, .controls) {
     0 40.2px 24px hsl(200deg 95% 3% / 8%), 0 75.2px 44px hsl(200deg 95% 3% / 9%),
     0 180px 80px hsl(200deg 95% 3% / 13%);
   inline-size: max-content;
-  padding-inline: var(--space-5);
-  margin-block: calc(-1 * var(--space-6)) 0;
+  padding-inline-start: var(--space-5);
+  padding-inline-end: var(--space-5);
+  margin-block-start: calc(-1 * var(--space-6));
   background: #fff;
   border-radius: var(--bdrs-md);
   border: 0.125rem solid #2c203b;
@@ -330,7 +332,7 @@ section summary {
   // padding-inline: var(--space-1);
   // margin-inline-start: 0.4rem;
   // justify-self: start;
-  width: max-content;
+  inline-size: max-content;
   padding: var(--space-3) var(--space-4) var(--space-1);
   text-transform: uppercase;
   font-family: "Wotfard";
@@ -671,7 +673,8 @@ button.reset::before {
 
 .exercise-details p > code {
   display: inline-block;
-  padding-inline: var(--space-2);
+  padding-inline-start: var(--space-2);
+  padding-inline-end: var(--space-2);
   font-size: 0.9em;
   background: #2a2138;
   // color: #72f1b8;
