@@ -83,8 +83,8 @@ const { customClass, help } = data
           <textarea aria-label="Write here" autocorrect="off" autocomplete="off" spellcheck="false" autocapitalize="off" class="prism-live language-css">{data.startingCSS.trim()}</textarea>
           <style class="style"></style>
         </div>
-        {data.help?.link ? (<small>Har du brug for hjælp? <a href={data.help.link} target="_blank" rel="noopener">
-            Lær mere om {data?.help?.topic}
+        {data.help?.link && data.help?.topic ? (<small>Har du brug for hjælp? <a href={data.help.link} target="_blank" rel="noopener">
+            Lær mere om {data.help?.topic} 
             <svg width="16" height="16" aria-label="åbner i nyt vindue.">
               <use href="#external-link"></use>
             </svg>
