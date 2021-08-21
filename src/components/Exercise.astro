@@ -91,26 +91,45 @@ const { customClass, help } = data
             </svg>
           </a>
         </small>) : null}
-        {num===1 && (
+        {num===1 && dataSuffix==="grid" && (
               <details class="popup">
-              <summary>HTML-struktur?</summary>
-              <div>
-              <Markdown>
-              ```html
-              <div class="container">
-                <div class="box box-1">.box-1</div>
-                <div class="box box-2">.box-2</div>
-                <div class="box box-3">.box-3</div>
-                <div class="box box-4">.box-4</div>
-                <div class="box box-5">.box-5</div>
-                <div class="box box-6">.box-6</div>
-                <div class="box box-7">.box-7</div>
-                <div class="box box-8">.box-8</div>
-                <div class="box box-9">.box-9</div>
-              </div>
-              ```
+                <summary>HTML-struktur?</summary>
+                <div>
+                  <Markdown>
+                  ```html
+                  <div class="container">
+                    <div class="box box-1">.box-1</div>
+                    <div class="box box-2">.box-2</div>
+                    <div class="box box-3">.box-3</div>
+                    <div class="box box-4">.box-4</div>
+                    <div class="box box-5">.box-5</div>
+                    <div class="box box-6">.box-6</div>
+                    <div class="box box-7">.box-7</div>
+                    <div class="box box-8">.box-8</div>
+                    <div class="box box-9">.box-9</div>
+                  </div>
+                  ```
+                  </Markdown>
+                </div>
+              </details>)}
 
-            </Markdown></div></details>)}
+        {num===1 && dataSuffix==="flex" && (
+              <details class="popup">
+                <summary>HTML-struktur?</summary>
+                <div>
+                  <Markdown>
+                  ```html
+                  <div class="container">
+                    <div class="box box-1">.box-1</div>
+                    <div class="box box-2">.box-2</div>
+                    <div class="box box-3">.box-3</div>
+                    <div class="box box-4">.box-4</div>
+                    <div class="box box-5">.box-5</div>
+                  </div>
+                  ```
+                  </Markdown>
+                </div>
+              </details>)}
       </section>
 
 
