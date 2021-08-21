@@ -234,6 +234,7 @@ section {
 
   display: grid;
   grid: auto / repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  grid-auto-flow: dense;
   /*place-content: start;*/
   gap: var(--space-5) var(--space-6);
 
@@ -352,7 +353,7 @@ section .hints {
   font-weight: 300;
 }
 
-section details {
+.exercise-content details {
   // position: relative;
   // border: 2px solid hsl(264deg 40% 85%);
   border: 2px solid transparent;
@@ -362,13 +363,13 @@ section details {
   border-radius: var(--bdrs-md);
 }
 
-section details[open] summary {
+.exercise-content details[open] summary {
   width: auto;
   border-radius: var(--bdrs-sm) var(--bdrs-sm) 0 0;
   // border-block-end: 2px solid hsl(154 29% 90%);
 }
 
-section summary {
+.exercise-content summary {
   border-radius: var(--bdrs-sm);
   color: var(--ui-accent);
   // background: hsl(264deg 35% 90%);

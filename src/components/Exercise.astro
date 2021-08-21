@@ -1,5 +1,6 @@
 ---
 import Button from "../components/Button.astro";
+import { Markdown } from 'astro/components';
 const { data, num, all, dataSuffix } = Astro.props;
 const boxes = [...Array(data.boxes)]
 const { customClass, help } = data
@@ -90,10 +91,54 @@ const { customClass, help } = data
             </svg>
           </a>
         </small>) : null}
+        {num===1 && (
+              <details class="popup">
+              <summary>HTML-struktur?</summary>
+              <div>
+              <Markdown>
+              ```html
+              <div class="container">
+                <div class="box box-1"></div>
+                <div class="box box-2"></div>
+                <!-- ... -->
+              </div>
+              ```
+
+            </Markdown></div></details>)}
       </section>
 
 
       <style lang="scss">
+       .popup {
+          position: relative;
+          color: var(--purple-600);
+        }
+
+        .popup summary {
+          cursor: pointer;
+          display: inline-block;
+          font-size: 80%;
+          font-weight: 500;
+          padding-inline-start: 1.2rem;
+          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%235000ca' d='m9 19 8-7-8-7z'%3E%3C/path%3E%3C/svg%3E") left 0 center / 1.2rem auto no-repeat;
+        }
+
+        .popup[open] summary {
+          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%235000ca' d='M5 15h14l-7-8z'%3E%3C/path%3E%3C/svg%3E") left 0 center / 1.2rem auto no-repeat;
+        }
+
+        .popup summary + div {
+          position: absolute;
+          width: clamp(15em, 60vw, 20em);
+          bottom: 100%;
+          left: var(--space-1);
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - .45rem), 3.25rem calc(100% - .45rem), 20% 100%, 4.75rem calc(100% - .45rem), 0 calc(100% - .45rem));
+        }
+
+        :global(.popup pre) {
+          margin-block: 0;
+        }
+
         small {
           font-size: 80%;
           font-weight: 500;
