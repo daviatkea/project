@@ -10,6 +10,20 @@
   }
   observeHeader();
 
+  const popup = document.querySelector(".popup");
+  const popupSum = document.querySelector(".popup summary");
+
+  popup.addEventListener("click", dismiss, { once: true });
+
+  function dismiss() {
+    document.addEventListener("click", ({ target }) => {
+      if (target !== popupSum) {
+        popup.open = false;
+        return;
+      }
+    });
+  }
+
   const heading = document.querySelector("h1");
   heading.addEventListener("click", () => {
     const span = heading.querySelector("span");

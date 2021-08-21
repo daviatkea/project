@@ -119,24 +119,44 @@ const { customClass, help } = data
           display: inline-block;
           font-size: 80%;
           font-weight: 500;
-          padding-inline-start: 1.2rem;
-          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%235000ca' d='m9 19 8-7-8-7z'%3E%3C/path%3E%3C/svg%3E") left 0 center / 1.2rem auto no-repeat;
+          background: var(--purple-50);
+          padding: 0 var(--space-2);
+          inline-size: -webkit-fit-content;
+          inline-size: -moz-fit-content;
+          inline-size: fit-content;
+          border-radius: var(--bdrs-sm);
+          margin-inline-start: var(--space-1);
+          user-select: none;
+          /*padding-inline-start: 1.2rem;
+          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%235000ca' d='m9 19 8-7-8-7z'%3E%3C/path%3E%3C/svg%3E") left 0 center / 1.2rem auto no-repeat;*/
+        }
+
+        .popup summary::marker {
+          content: none;
+        }
+
+        .popup summary::-webkit-details-marker {
+          display:none;
         }
 
         .popup[open] summary {
-          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%235000ca' d='M5 15h14l-7-8z'%3E%3C/path%3E%3C/svg%3E") left 0 center / 1.2rem auto no-repeat;
+          background: #34294d;
+          color: #fff;
+          /*background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%235000ca' d='M5 15h14l-7-8z'%3E%3C/path%3E%3C/svg%3E") left 0 center / 1.2rem auto no-repeat;*/
         }
 
         .popup summary + div {
           position: absolute;
           width: clamp(15em, 60vw, 20em);
           bottom: 100%;
-          left: var(--space-1);
+          left: var(--space-4);
           clip-path: polygon(0 0, 100% 0, 100% calc(100% - .45rem), 3.25rem calc(100% - .45rem), 20% 100%, 4.75rem calc(100% - .45rem), 0 calc(100% - .45rem));
         }
 
         :global(.popup pre) {
           margin-block: 0;
+          border-radius: 6px 6px 40px 40px / 6px 6px 12px 12px;
+          user-select: none;
         }
 
         small {
