@@ -391,10 +391,6 @@ section .hints {
   cursor: pointer;
   user-select: none;
   touch-action: manipulation;
-
-  &:focus {
-    outline-style: solid;
-  }
 }
 
 section [data-no-hints] {
