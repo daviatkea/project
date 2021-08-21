@@ -125,7 +125,6 @@ const { customClass, help } = data
           inline-size: -moz-fit-content;
           inline-size: fit-content;
           border-radius: var(--bdrs-sm);
-          margin-inline-start: var(--space-1);
           user-select: none;
           /*padding-inline-start: 1.2rem;
           background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%235000ca' d='m9 19 8-7-8-7z'%3E%3C/path%3E%3C/svg%3E") left 0 center / 1.2rem auto no-repeat;*/
@@ -149,7 +148,7 @@ const { customClass, help } = data
           position: absolute;
           width: clamp(15em, 60vw, 20em);
           bottom: 100%;
-          left: var(--space-4);
+          left: calc(var(--space-3) * -1);
           clip-path: polygon(0 0, 100% 0, 100% calc(100% - .45rem), 3.25rem calc(100% - .45rem), 20% 100%, 4.75rem calc(100% - .45rem), 0 calc(100% - .45rem));
         }
 
