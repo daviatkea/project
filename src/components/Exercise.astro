@@ -152,7 +152,7 @@ const { customClass, help } = data
 
         .popup summary + div {
           position: absolute;
-          width: clamp(15em, 90vw, 20em);
+          width: clamp(20em, 80vw, 30em);
           bottom: 100%;
           left: calc(var(--space-3) * -1);
           clip-path: polygon(0 0, 100% 0, 100% calc(100% - .45rem), 3.25rem calc(100% - .45rem), 4rem 100%, 4.75rem calc(100% - .45rem), 0 calc(100% - .45rem));
@@ -163,6 +163,12 @@ const { customClass, help } = data
         :global(.popup pre) {
           margin-block: 0;
           border-radius: 6px 6px 40px 40px / 6px 6px 12px 12px;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+
+        :global(.popup pre)::-webkit-scrollbar {
+            display: none; /* for Chrome, Safari, and Opera */
         }
 
         small {
