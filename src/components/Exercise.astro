@@ -156,13 +156,13 @@ const { customClass, help } = data
           bottom: 100%;
           left: calc(var(--space-3) * -1);
           clip-path: polygon(0 0, 100% 0, 100% calc(100% - .45rem), 3.25rem calc(100% - .45rem), 20% 100%, 4.75rem calc(100% - .45rem), 0 calc(100% - .45rem));
+          z-index: 10;
+          touch-action: pan-x;
         }
 
         :global(.popup pre) {
           margin-block: 0;
           border-radius: 6px 6px 40px 40px / 6px 6px 12px 12px;
-          user-select: none;
-          touch-action: pan-x;
         }
 
         small {
