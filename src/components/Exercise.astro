@@ -7,7 +7,7 @@ const { customClass, help } = data
 ---
 
 <section data-extra={data.isExtra && "true"} data-exercise-key={`${dataSuffix}-${num}`} class={customClass ?? null}>
-        <h2 class="small-label" id={`exercise-${num}`}>Øvelse {num} af {all}</h2>
+        <h2 class="small-label" id={`exercise-${num}`}><a href={`#exercise-${num}`}>Øvelse {num} af {all}</a></h2>
 
         {data.isExtra && (
             <div class="banner" data-banner-title="Ekstra"></div>

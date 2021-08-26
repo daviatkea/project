@@ -24,6 +24,16 @@
     });
   }
 
+  const copyMe = document.querySelectorAll("h2 a[href]");
+
+  copyMe.forEach((c) => {
+    c.addEventListener("click", ({ target }) => {
+      const url = window.location.href.split("#")[0];
+      if (target.tagName === "A")
+        navigator.clipboard.writeText(`${url}${c.hash}`);
+    });
+  });
+
   const heading = document.querySelector("h1");
   heading.addEventListener("click", () => {
     const span = heading.querySelector("span");

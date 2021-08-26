@@ -308,6 +308,11 @@ section :is(.small-label, .exercise-details, .controls) {
   border-radius: var(--bdrs-md);
   border: 0.125rem solid #2c203b;
   isolation: isolate;
+
+  a:any-link {
+    color: var(--ui-accent);
+    text-decoration: none;
+  }
 }
 
 .small-label::before {
