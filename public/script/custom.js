@@ -91,6 +91,7 @@
         resetUI();
       } else {
         resetBtns.classList.add("active");
+        confirming.querySelector(":scope > :first-child").focus();
       }
     });
 
