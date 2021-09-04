@@ -33,9 +33,26 @@
             transform-origin: 0 0;
             transition: 0.1s cubic-bezier(0.5, 0, 0.5, 1);
             pointer-events: auto;
+            position: relative;
             @supports (backdrop-filter: blur(1px)) {
                 background: hsl(242deg 43% 13% / 85%);
                 backdrop-filter: blur(10px)
+            }
+
+            &::after {
+                content: 'Grid edition';
+                position: absolute;
+                font-size: 0.6rem;
+                inline-size: max-content;
+                font-weight: 800;
+                color: #fff;
+                border-radius: var(--bdrs-round);
+                padding: .15rem .2rem;
+                line-height: 1;
+                background: #151331;
+                inset-block-end: .9rem;
+                inset-inline-end: .5rem;
+                letter-spacing: 0.06rem;
             }
         }
 
