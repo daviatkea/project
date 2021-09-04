@@ -459,6 +459,7 @@ section [data-no-hints] {
   background: var(--m);
   margin-inline-end: var(--space-3);
   box-shadow: 0 0 0 1px var(--mbg);
+  flex-shrink: 0;
 }
 
 [data-type="property"] {

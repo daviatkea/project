@@ -32,7 +32,7 @@ const { customClass, help } = data
                     <summary>Hints</summary>
                     <ul class="hints">
                         {data.hints.map(hint=>{
-                            return <li data-type={hint?.type}><code>{hint?.name}</code> ({hint?.type})</li>      
+                            return <li data-type={hint?.type}><span><code>{hint?.name}</code> ({hint?.type})</span></li>      
                         })}
                     </ul>
                 </details>
