@@ -145,7 +145,7 @@
 html {
   /* block-size: 100%; */
   scroll-padding-block-start: var(--space-7);
-  touch-action: pan-y;
+  touch-action: pan-y, manipulation;
 }
 
 body {
@@ -621,6 +621,7 @@ section.bg-image .output > div {
   // align-self: start;
   display: grid;
   grid-template-rows: min-content;
+  touch-action: none;
 
   &::before {
     content: "css";
