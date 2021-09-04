@@ -33,6 +33,10 @@
             transform-origin: 0 0;
             transition: 0.1s cubic-bezier(0.5, 0, 0.5, 1);
             pointer-events: auto;
+            @supports (backdrop-filter: blur(1px)) {
+                background: hsl(242deg 43% 13% / 85%);
+                backdrop-filter: blur(10px)
+            }
         }
 
         &.is-pinned {
