@@ -338,6 +338,7 @@
       now.setTime(expires);
       document.cookie = "nf_ab=solutions; expires=" + now.toUTCString();
       window.location.reload();
+
       // document.documentElement.dataset.extra = "true";
       // document
       //   .querySelectorAll("section[data-extra='true']")[0]
