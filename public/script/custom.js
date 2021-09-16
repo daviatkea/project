@@ -332,17 +332,15 @@
     );
     konamiString = konamiCode.join("");
 
-    if (keySequence.join("").includes(konamiString)) {
-      let now = new Date();
-      let expires = now.getTime() + 1000 * 3600 * 24 * 365;
-      now.setTime(expires);
-      document.cookie = "nf_ab=solutions; expires=" + now.toUTCString();
-      window.location.reload();
+    if (
+      keySequence.join("").includes(konamiString) &&
+      !document.documentElement.dataset.extra
+    ) {
+      document.documentElement.dataset.extra = "true";
 
-      // document.documentElement.dataset.extra = "true";
-      // document
-      //   .querySelectorAll("section[data-extra='true']")[0]
-      //   .scrollIntoView({ behavior: "smooth" });
+      document
+        .querySelectorAll("section[data-extra='true']")[0]
+        .scrollIntoView({ behavior: "smooth" });
     }
   });
 }
